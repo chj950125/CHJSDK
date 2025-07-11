@@ -36,7 +36,7 @@ Pod::Spec.new do |spec|
                   于业务逻辑的实现，而不必重复造轮子。希望这个SDK能够帮助开发者提高开发效率，减少重复工作。
                    DESC
 
-  spec.homepage     = "http://EXAMPLE/CHJSDK"
+  spec.homepage     = "https://github.com/chj950125/CHJSDK"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -73,7 +73,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.platform     = :ios, "13.0"
-  spec.swift_version = "5.0"
+  spec.swift_versions = ['5.0']
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
@@ -100,8 +100,8 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
+  spec.source_files  = "**/*.{h,m,swift}"
+  # spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
 
@@ -142,11 +142,10 @@ Pod::Spec.new do |spec|
   # spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # spec.dependency "JSONKit", "~> 1.4"
-  spec.dependency 'HandyJSON', '~> 5.0'
-  spec.dependency 'Alamofire', '~> 5.0'
-  spec.dependency 'Kingfisher', '~> 6.0'
-  spec.dependency 'SnapKit', '~> 5.0'
+  
+  spec.dependency 'Alamofire'
+  spec.dependency 'Kingfisher'
+  spec.dependency 'SnapKit'
   spec.dependency 'SwiftyJSON', '~> 5.0'
   spec.dependency 'MBProgressHUD', '~> 1.2'
   spec.dependency 'SDWebImage', '~> 5.0'
@@ -159,6 +158,5 @@ Pod::Spec.new do |spec|
   spec.dependency 'RxSwift', '~> 6.0'
   spec.dependency 'RxCocoa', '~> 6.0'
   spec.dependency 'RxRelay', '~> 6.0'
-  spec.dependency 'RxDataSources', '~> 6.0'
 
 end
